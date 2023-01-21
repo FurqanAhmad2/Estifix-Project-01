@@ -1,0 +1,41 @@
+.dropdown1 {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown1 ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  background: #f9f9f9;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.dropdown1 ul li {
+  display: block;
+  width: 100%;
+}
+
+.dropdown1 ul li a {
+  display: block;
+  padding: 12px 20px;
+  text-decoration: none;
+  color: #333;
+}
+
+.dropdown1 ul li a:hover {
+  background: #eee;
+}
+
+.dropdown1:hover ul {
+  display: block;
+}
+
+.dropdown1 ul ul {
+  top: 0;
+  left: 100%;
+}
