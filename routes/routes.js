@@ -166,6 +166,9 @@ router.get('/service-07Arabic.ejs', (req, res) => {
 })
 
 
+router.get('/index-2arabic.ejs', (req, res) => {
+  res.render("index-2arabic");
+})
 
 
 router.post('/sendemail',control.sendMail);

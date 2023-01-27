@@ -2,6 +2,7 @@ const transporter = require("../nodeMailer/transporter");
 
 
 const sendMail = (req, res) => {
+    const AdminEmail="info@exceeditllc.com";
 
     const Name = req.body.username;
     const Email = req.body.email;
@@ -12,7 +13,7 @@ const sendMail = (req, res) => {
 
     let mail = transporter.sendMail({
         from: 'azraunt@gmail.com',
-        to: `${Email}`,
+        to: `${AdminEmail}`,
         subject: "Message",
         html: `<h1>Naseem Al-Roudha (Message from ${Name}</h1>
                 <h4>Subject : ${subject}</h4> <br>
@@ -20,13 +21,7 @@ const sendMail = (req, res) => {
     });
 
 
-        // const mailOptions = {
-        //   from: "docadvisormail@gmail.com", // sender address
-        //   to: req.body.email, // list of receivers
-        //   subject: `Welcome to DocAdvisor`, // Subject line
-        //   html: html,
-        // };
-
+        
 
 
     res.render('contact');
